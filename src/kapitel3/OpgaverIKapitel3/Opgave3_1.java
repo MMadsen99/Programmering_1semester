@@ -30,8 +30,3 @@ public class Opgave3_1 {
     }
 }
 
-//          if (x == 1){
-//            System.out.println(" x er 1");
-//        }else{
-//            System.out.println(" x er ikke 1");
-//        }

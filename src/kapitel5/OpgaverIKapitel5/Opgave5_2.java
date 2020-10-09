@@ -9,7 +9,7 @@ public class Opgave5_2 {
         double Number2 = Math.random() * 100;
         double svar = ((int)Number1 - (int)Number2);
 
-        System.out.println("Hvad er " + (int)Number1 + "minius " + (int)Number2 + "?");
+        System.out.println("Hvad er " + (int)Number1 + " minius " + (int)Number2 + "?");
 
         Scanner input = new Scanner(System.in);
 
@@ -17,7 +17,7 @@ public class Opgave5_2 {
             System.out.println("Du regnede rigtigt");
 
 
-        while (input.nextInt() != (int)svar) {
+        while ( input.nextInt() != (int)svar) {
 
             System.out.println(" Prøv igen");
         }
