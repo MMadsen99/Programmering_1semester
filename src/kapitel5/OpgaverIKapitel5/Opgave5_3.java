@@ -8,11 +8,12 @@ public class Opgave5_3 {
         System.out.println("\t\t");
 
         for (int k = 0; k <= 100; k++) {
-            double i = k * 9 / 5 + 32;
+            double i = k * 9 / 5.0 + 32;
+
             System.out.println("\t" + k + "\t\t\t\t" + (double)i);
 
         }
-
+        System.out.println("-------------------------------");
             
         }
     }
