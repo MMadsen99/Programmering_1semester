@@ -1,6 +1,6 @@
-package kapitel5.OpgaverIKapitel5;
+package kapitel5.OpgaverIKapitel5.Opgave5_3;
 
-public class Opgave5_3 {
+public class Opgave_5_3_anden_version {
     public static void main(String[] args) {
         //overskriften
         System.out.println("Celsius \t\t\tFahrenheit");
