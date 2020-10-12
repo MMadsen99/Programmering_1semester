@@ -23,6 +23,5 @@ public class Opgave5_9 {
 
         }
 
-
     }
 }
