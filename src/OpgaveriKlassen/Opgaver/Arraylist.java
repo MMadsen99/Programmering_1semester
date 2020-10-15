@@ -1,4 +1,4 @@
-package OpgaveriKlassen.constructor.Opgaver;
+package OpgaveriKlassen.Opgaver;
 
 import java.util.ArrayList;
 
