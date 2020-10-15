@@ -12,10 +12,8 @@ public class Main {
         st2.alder = 22;
         st2.by = "Næstved";
 
-        Studerende st3 = new Studerende();
-        st3.navn = "Bo";
-        st3.alder = 25;
-        st3.by = "Næstved";
+        Studerende st3 = new Studerende("Bo", 25, "Næstved");
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Hvilken studerende ville du slå op?");
