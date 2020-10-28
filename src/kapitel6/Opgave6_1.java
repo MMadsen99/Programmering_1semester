@@ -1,11 +1,11 @@
-package kapitel6.Opgave6_2;
+package kapitel6;
 
 public class Opgave6_1 {
     public static void main(String[] args) {
-
+        // write the PentagonalNumber 100 times
         for (int i = 0; i < 101; i++) {
 
-            System.out.printf("%7d\n", GetPentagonalNumber(1 + i));
+            System.out.printf("%7d\n", GetPentagonalNumber(1 + i)); //GetPentagonalNumber calls the method belows
 
         }
 

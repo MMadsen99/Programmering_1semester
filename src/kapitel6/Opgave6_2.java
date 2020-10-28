@@ -1,4 +1,4 @@
-package kapitel6.Opgave6_2;
+package kapitel6;
 
 import java.util.Scanner;
 
