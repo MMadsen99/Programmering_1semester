@@ -14,11 +14,11 @@ public class Opgave6_3 {
 
     }
 
-//Return the reversal of an integer.. reverse(456) returns 654
+//Return the reversal, reverse(456) returns 654
 public static int reverse(int number) {
 
-    String reverse = ""; 	// Holds reversed number
-    String n = number + ""; // Convert number to string
+    String reverse = ""; 	// Holder reversed number
+    String n = number + ""; // konventere number til string
 
 
     // Reverse string
