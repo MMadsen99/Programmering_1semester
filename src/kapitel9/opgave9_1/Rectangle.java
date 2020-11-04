@@ -39,5 +39,3 @@ public class Rectangle {
      }
 
 }
-
-// test commit 2.0
