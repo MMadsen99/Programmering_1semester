@@ -32,7 +32,7 @@ class LoanTest {
         Loan loan1 = new Loan();
 
         loan1.getMonthlyPayment();
-        assertEquals();
+       // assertEquals();
     }
 
     @org.junit.jupiter.api.Test
