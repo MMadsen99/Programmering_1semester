@@ -18,6 +18,9 @@ public class Account {
 
         Account account2 = new Account(2,15000, 2);
         account2.printAccountDetails();
+
+        Account account3 = new Account();
+        account3.printAccountDetails();
     }
     // no-arg constructor ( No-argument constructor)
     Account(){
@@ -25,9 +28,9 @@ public class Account {
     }
 
     Account(int id,double balance, double annualInterestRate){
-        setId(1);
-        setBalance(1);
-        setAnnualInterestRate(1.5);
+        setId(id);
+        setBalance(balance);
+        setAnnualInterestRate(annualInterestRate);
     }
 
     public int getId() {
