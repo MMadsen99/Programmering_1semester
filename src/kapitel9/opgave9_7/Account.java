@@ -5,29 +5,29 @@ import java.util.Date;
 public class Account {
     private int id; // id for the account
     private double balance; // how much money the account have
-    private double annualInterestRate = 0; // all accounts have the same intrest rate
+    private double annualInterestRate; // all accounts have the same intrest rate
     private Date dateCreated; // stores the date the account was created
 
     public static void main(String[] args) {
 
         Account account1 = new Account();
-        Account account2 = new Account(1,10000);
+        account1.setId(10);
+        account1.setBalance(10000);
+        account1.setAnnualInterestRate(2.0);
+        account1.printAccountDetails();
 
-        System.out.println(account1.id);
-        System.out.println(account2.id);
-        System.out.println(account1.balance);
-        System.out.println(account2.balance);
-
+        Account account2 = new Account(2,15000, 2);
+        account2.printAccountDetails();
     }
     // no-arg constructor ( No-argument constructor)
     Account(){
 
     }
 
-    Account(int id,double balance){
+    Account(int id,double balance, double annualInterestRate){
         setId(1);
         setBalance(1);
-
+        setAnnualInterestRate(1.5);
     }
 
     public int getId() {
@@ -57,4 +57,10 @@ public class Account {
     public Date getDateCreated() {
         return dateCreated;
     }
+
+
+    public void printAccountDetails(){
+        System.out.println("id: " + getId() + "\n" + "balance: " + getBalance() + "\n" + "the annual interest rate is: " + getAnnualInterestRate());
+    }
+
 }
