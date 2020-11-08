@@ -12,25 +12,19 @@ public class Account {
     public static void main(String[] args) {
 
         Account account1 = new Account();
-        account1.setId(10);
-        account1.setBalance(10000);
+        account1.setId(1);
+        account1.setBalance(15000);
         account1.setAnnualInterestRate(2.0);
         account1.printAccountDetails();
-
-        Account account2 = new Account(2,15000, 2);
-        account2.printAccountDetails();
-
-
-        Account account3 = new Account(3, 100000,2);
-        account3.printAccountDetails();
-
+        System.out.println("After one month the balance is: " + account1.getMonthlyInterest());
         System.out.println("The monthly interest rate is: " + Account.getMonthlyInterestRate() + " for all accounts");
-
-        getMonthlyInterest();
+        account1.withdraw(7500);
+        account1.deposit(555);
 
 
 
     }
+
     // no-arg constructor ( No-argument constructor)
     Account(){
 
@@ -40,6 +34,8 @@ public class Account {
         setId(id);
         setBalance(balance);
         setAnnualInterestRate(annualInterestRate);
+
+
     }
 
     public int getId() {
@@ -50,7 +46,7 @@ public class Account {
         this.id = id;
     }
 
-    public double getBalance() {
+    public static double getBalance() {
         return balance;
     }
 
@@ -80,11 +76,35 @@ public class Account {
 
     public static double getMonthlyInterest(){
 
-        double monthlyinterestNumber = ((getMonthlyInterestRate() * balance) + balance);
+        double monthlyinterestNumber = ((getMonthlyInterestRate() * balance) + balance );
 
         System.out.println(monthlyinterestNumber);
 
+        balance = monthlyinterestNumber;
+
         return monthlyinterestNumber;
+    }
+    public static double withdraw(double x){
+
+
+        if (x > balance){
+            System.out.println("Error, not enough balance");
+        }
+        double newBalance = balance - x;
+
+        balance = newBalance;
+
+        System.out.println("withdrew "+ x + " new balance is: " + balance);
+        return balance;
+    }
+    public static double deposit(double x){
+
+        double newBalance = balance + x;
+
+        balance = newBalance;
+
+        System.out.println("deposited " + x + " new balance is: " + balance);
+        return balance;
     }
 
     public void printAccountDetails(){
