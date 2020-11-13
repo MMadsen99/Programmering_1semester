@@ -8,7 +8,7 @@ public class Account {
     private static double balance; // how much money the account have
     private static double annualInterestRate; // all accounts have the same intrest rate
     private Date dateCreated; // stores the date the account was created
-    //static DecimalFormat decFormat = new DecimalFormat("0.000"); //TODO fix decimals
+    static DecimalFormat df = new DecimalFormat("0.00"); //TODO fix decimals
     public static void main(String[] args) {
 
         Account account1 = new Account();
@@ -16,8 +16,8 @@ public class Account {
         account1.setBalance(15000);
         account1.setAnnualInterestRate(2.0);
         account1.printAccountDetails();
-        System.out.println("After one month the balance is: " + account1.getMonthlyInterest());
-        System.out.println("The monthly interest rate is: " + Account.getMonthlyInterestRate() + " for all accounts");
+        System.out.println("After one month the balance is: " + df.format(account1.getMonthlyInterest()));
+        System.out.println("The monthly interest rate is: " + df.format(Account.getMonthlyInterestRate()) + " for all accounts");
         account1.withdraw(7500);
         account1.deposit(555);
 
@@ -69,7 +69,7 @@ public class Account {
     public static double getMonthlyInterestRate(){
 
         double monthlyInterestRate = annualInterestRate /12;
-        //  decFormat.format(monthlyInterestRate); //TODO  fix decimals
+         df.format(monthlyInterestRate); //TODO  fix decimals
 
         return monthlyInterestRate;
     }
