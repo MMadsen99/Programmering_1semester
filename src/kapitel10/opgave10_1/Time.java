@@ -9,39 +9,19 @@ public class Time {
     long minute;
     long second;
 
-    // Time since jan0 1 1970 in seconds = 1605260347
 
-    public static void main(String[] args) {
-        //  currentTime();
 
-        /*
-        Time time = new Time(1605260347);
-        Time time1 = new Time(1000);
-        Time time2 = new Time(40, 30, 90);
-        */
-        setTime(555550000); // time in milliseconds
-    }
-
+    //current time
     Time() {
-        long hour = 0;
-        long minute = 0;
-        long second = 0;
-    }
-
-    Time(long second) {
-
-        long secondCurrently = second / 100;
-
-        long minutsCurrently = secondCurrently / 60;
-
-        long hourCurrently = minutsCurrently / 60;
-
-        System.out.println(hourCurrently + ":" + minutsCurrently + ":" + second);
+        System.currentTimeMillis();
     }
 
     Time(long second, long minute, long hour) {
+        this.second = second;
+        this.minute = minute;
+        this.hour = hour;
 
-
+        System.out.println(getHour() + ":" + getMinute() + ":" + getSecond());
     }
 
     public long getHour() {
@@ -79,17 +59,12 @@ public class Time {
 
         long remaningSeconds3 = minute * 60;
 
-        long secound = remaningSeconds2 - remaningSeconds3;
+        long second = remaningSeconds2 - remaningSeconds3;
 
 
-
-
-
-        System.out.println( "hour is " + hour);
+        System.out.println( "hour is " + hour % 24);
         System.out.println( "minute is " + minute);
-        System.out.println( "secound is " + secound);
-
-
+        System.out.println( "secound is " + second);
 
 
     }
