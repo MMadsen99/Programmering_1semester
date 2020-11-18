@@ -8,7 +8,7 @@ public class Account {
     private static double balance; // how much money the account have
     private static double annualInterestRate; // all accounts have the same intrest rate
     private Date dateCreated; // stores the date the account was created
-    static DecimalFormat df = new DecimalFormat("0.00"); //TODO fix decimals
+    static DecimalFormat df = new DecimalFormat("0.00");
     public static void main(String[] args) {
 
         Account account1 = new Account();
