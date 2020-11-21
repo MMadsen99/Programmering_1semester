@@ -17,7 +17,12 @@ public class ArrayIndexOutOfBounds {
     }
     public static void WrongNumber(){
         try{
+        /*
+            Code to run:
+            A statement or a method that may throw an exception;
+            More code to run;
 
+         */
 
         }
         catch (ArrayIndexOutOfBoundsException exception) {
